@@ -53,4 +53,9 @@
   "main": "next.config.js",
   "author": "",
   "license": "ISC",
-  "devDependen
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "http-server": "^14.1.1",
+    "prisma": "^5.2.0"
+  }
+}
