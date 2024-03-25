@@ -46,4 +46,25 @@ model User {
   emailVerified DateTime?
   image         String?
   credits       Int       @default(10)
-  ac
+  accounts Account[]
+  sessions Session[]
+}
+
+model Course{
+  id            String    @id @default(cuid())
+  name          String
+  image         String
+  units         Unit[]
+}
+
+model Unit{
+  id            String    @id @default(cuid())
+  courseId      String
+  name          String
+  course        Course    @relation(fields: [courseId], references:[id])
+  chapters      Chapter[]
+  @@index([courseId], name:"courseId")
+}
+
+model Chapter{
+  id                 String    @id @defaul
