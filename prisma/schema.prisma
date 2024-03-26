@@ -84,4 +84,10 @@ model Question{
   chapterId         String
   question          String @db.VarChar(3000)
   answer            String @db.VarChar(3000)
-  optio
+  options           String @db.VarChar(3000)
+  chapter           Chapter @relation(fields:[chapterId], references:[id])
+
+  @@index([chapterId], name:"chapterId")
+
+
+}
