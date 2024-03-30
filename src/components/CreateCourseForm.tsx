@@ -27,4 +27,24 @@ const CreateCourseForm = (props: Props) => {
   const {toast}=useToast()
   const {mutate:createChapters, isLoading}=useMutation({
     mutationFn: async({title,units}:Input)=>{
-        const response=await a
+        const response=await axios.post('/api/course/createChapters', {title,units})
+        return response.data
+
+    }
+  })
+  const form=useForm<Input>({
+        resolver:zodResolver(createChaptersSchema),
+        defaultValues:{
+            title:'',
+            units:['','','']
+        }
+    })
+
+  function onSubmit(data:Input){
+        if (data.units.some(unit=>unit==='')){
+            toast({
+                title:"error",
+                description:"please fill all the units",
+                variant:"destructive",
+
+   
