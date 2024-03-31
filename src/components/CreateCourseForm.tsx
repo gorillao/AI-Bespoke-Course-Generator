@@ -81,4 +81,16 @@ const CreateCourseForm = (props: Props) => {
             name='title'
             render={({field})=>{
                 return(<FormItem className="flex flex-col items-start w-full sm:items-center flex-row">
-   
+                    <FormLabel className="flex-[1] text-xl">
+                        Title
+                    </FormLabel>
+                    <FormControl className="flex-[6]">
+                        <Input
+                        placeholder="Enter the main topic of the course"
+                        {...field}/>
+                    </FormControl>
+                </FormItem>
+                )
+            }}/>
+            <AnimatePresence>
+                           
