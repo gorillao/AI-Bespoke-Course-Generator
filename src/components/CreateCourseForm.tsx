@@ -63,4 +63,22 @@ const CreateCourseForm = (props: Props) => {
                 console.error(error)
                 toast({
                     title:"Error",
-             
+                    description:"Something went wrong",
+                    variant:"destructive",
+                })
+            }
+        })
+    }
+  form.watch();
+  
+
+  return (
+    <div className='w-full'>
+        <Form {...form}>
+         <form onSubmit={form.handleSubmit(onSubmit)} className='w-full mt-4'>
+            <FormField
+            control={form.control}
+            name='title'
+            render={({field})=>{
+                return(<FormItem className="flex flex-col items-start w-full sm:items-center flex-row">
+   
