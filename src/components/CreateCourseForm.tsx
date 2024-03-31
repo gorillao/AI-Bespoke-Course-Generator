@@ -93,4 +93,12 @@ const CreateCourseForm = (props: Props) => {
                 )
             }}/>
             <AnimatePresence>
-                           
+                            {form.watch('units').map((_,index)=>{
+                            return(
+                                <motion.div key={index} 
+                                            initial={{opacity:0, height:0}}
+                                            animate={{opacity:1, height:"auto"}}
+                                            exit={{opacity:0, height:0}}
+                                            transition={{
+                                                opacity:{duration:0.2},
+                                         
