@@ -47,4 +47,20 @@ const CreateCourseForm = (props: Props) => {
                 description:"please fill all the units",
                 variant:"destructive",
 
-   
+            })
+            return;
+        }
+        createChapters(data,{
+            onSuccess:({course_id})=>{
+                toast({
+                    title:"success",
+                    description:"course created successfully",
+                })
+                router.push(`/create/${course_id}`)
+
+            },
+            onError:(error)=>{
+                console.error(error)
+                toast({
+                    title:"Error",
+             
