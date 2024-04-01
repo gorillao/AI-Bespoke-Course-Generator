@@ -116,4 +116,16 @@ const CreateCourseForm = (props: Props) => {
                                                 <FormControl className='flex-[6]'>
                                                     <Input placeholder='Enter subtopic of the course'
                                                     {...field}
-                                           
+                                                    />
+                                                    
+                                                    
+                                                </FormControl>
+                                        </FormItem>
+                                    )
+                                }}
+                                />
+                                </motion.div>
+                        
+                            )
+                            })}
+            </AnimatePresence>
