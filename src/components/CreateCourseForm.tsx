@@ -101,4 +101,13 @@ const CreateCourseForm = (props: Props) => {
                                             exit={{opacity:0, height:0}}
                                             transition={{
                                                 opacity:{duration:0.2},
-                                         
+                                                height:{duration:0.2}
+                                            }}>    
+                                <FormField 
+                                key={index} 
+                                control={form.control} 
+                                name={`units.${index}`}
+                                render={({field})=>{
+                                    return(
+                                        <FormItem className='flex flex-col items-start w-full sm:items-center sm:flex-row'>
+            
