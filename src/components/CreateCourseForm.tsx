@@ -129,3 +129,14 @@ const CreateCourseForm = (props: Props) => {
                             )
                             })}
             </AnimatePresence>
+            <div className='flex items-center justify-center mt-4'>
+                <Separator className="flex-[1]"/>
+                <div className='mx-4'>
+                    <Button type='button' variant='secondary' className='font-semibold' onClick={()=>{
+                        form.setValue('units', [...form.watch('units'),""])
+                    }}>
+                        Add Unit
+                        <Plus className="w-4 h-4 ml-2 text-green-500"/>
+                    </Button>
+
+           
