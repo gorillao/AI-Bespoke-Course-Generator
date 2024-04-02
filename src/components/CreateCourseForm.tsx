@@ -139,4 +139,14 @@ const CreateCourseForm = (props: Props) => {
                         <Plus className="w-4 h-4 ml-2 text-green-500"/>
                     </Button>
 
-           
+                    <Button type='button' variant='secondary' className='font-semibold ml-2' onClick={()=>{
+                        form.setValue('units',form.watch('units').slice(0,-1))
+                    }}>
+                        Remove Unit
+                        <Trash className="w-4 h-4 ml-2 text-red-500"/>
+                    </Button>
+
+                </div>
+                <Separator className='flex-[1]'/>
+            </div>
+            <Button disabled={isLoading} type="submi
