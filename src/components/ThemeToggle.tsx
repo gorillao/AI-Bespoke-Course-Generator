@@ -29,4 +29,14 @@ export function ThemeToggle({className, ...props}:React.HTMLAttributes<HTMLDivEl
                 <DropdownMenuItem onClick={() => setTheme("light")}>
                  Light
                 </DropdownMenuItem>
-                <DropdownMe
+                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                    Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("system")}>
+                    System
+                </DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
+  </div>
+  )
+}
