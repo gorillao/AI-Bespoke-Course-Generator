@@ -36,4 +36,11 @@ const UserAccountNav = ({user}: Props) => {
 
 
             }}
-            className='tex
+            className='text-red-600 cursor-pointer'
+            >Sign out <LogOut className="w-4 h-4 ml-2"/></DropdownMenuItem>
+        </DropdownMenuContent>
+    </DropdownMenu>
+  )
+}
+
+export default UserAccountNav
