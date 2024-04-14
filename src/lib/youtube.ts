@@ -23,4 +23,24 @@ export async function getTranscript(videoId:string){
         let transcript_arr=await YoutubeTranscript.fetchTranscript(videoId,{
             lang: "en",
             country:"EN"
-       
+        })
+        let transcript=''
+        for (let t of transcript_arr){
+            transcript+=t.text+' '
+
+        }
+        return transcript.replaceAll("/n","")
+    } catch (error){
+        return ""
+    }
+}
+export async function getQuestionsFromTranscript(transcript:string, course_title:string){
+    type Question={
+        question:string,
+        answer:string,
+        option1:string,
+        option2:string,
+        option3:string,
+    }
+const questions:Question[]= await strict_output(
+    'You are a helpful
