@@ -43,4 +43,13 @@ export async function getQuestionsFromTranscript(transcript:string, course_title
         option3:string,
     }
 const questions:Question[]= await strict_output(
-    'You are a helpful
+    'You are a helpful AI that is able to generate mcq questions and answers, the length of each answer should not be more than 15 words',
+    new Array(5).fill(
+        `You are to generate a random hard mcq question about ${course_title} with context of the following transcript: ${transcript}`
+    ),
+    {
+        questions:'question',
+        answer:'answer with max length of 15 words',
+        option1:'option1 with max length of 15 words',
+        option2:'option2 with max length of 15 words',
+        op
