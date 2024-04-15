@@ -52,4 +52,9 @@ const questions:Question[]= await strict_output(
         answer:'answer with max length of 15 words',
         option1:'option1 with max length of 15 words',
         option2:'option2 with max length of 15 words',
-        op
+        option3:'option3 with max length of 15 words',
+    }
+)
+return questions
+}
+
